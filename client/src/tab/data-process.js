@@ -14,7 +14,7 @@ function initSource(data) {
 	})
 }
 
-const dataSource = 'http://www.mocky.io/v2/581335f71000004204abaf83'
+const dataSource = '//www.mocky.io/v2/581335f71000004204abaf83'
 if (window) {
 	if (window.fetch) {
 		window.fetch(dataSource)
