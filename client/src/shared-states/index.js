@@ -4,7 +4,9 @@ import State from './state'
 
 
 const states = {
-  search: new State('')
+  search: new State(''),
+  sorting: new State(['name', true]),
+  filters: new State({name: true, phone_number: false, address: true}),
 }
 
 

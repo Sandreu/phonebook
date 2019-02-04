@@ -1,4 +1,9 @@
-export default {
+import React from 'react'
+import { useSharedState } from '../shared-states'
+
+import View from './view'
+
+const data = {
   "contacts": [
   	{
 			"name": "Oleta Level",
@@ -42,4 +47,38 @@ export default {
 			"address": "Pinewood, Tockholes Rd, Darwen BB3 1JY, UK"
 		}
 	]
+}
+
+const source = data.contacts.map((e, i) => {
+  return Object.assign({
+    _index: i,
+    _search_name: e.name.toLowerCase(),
+    _search_address: e.address.toLowerCase(),
+  }, e)
+})
+
+export default () => {
+  let search = useSharedState('search').toLowerCase()
+  let sorting = useSharedState('sorting')
+  let filters = useSharedState('filters')
+  
+  let processed = source
+  
+  if (search) {
+    processed = processed.filter(e => {
+      if (filters.name && e._search_name.indexOf(search) > -1) return true
+      if (filters.phone_number && e.phone_number.indexOf(search) > -1) return true
+      if (filters.address && e._search_address.indexOf(search) > -1) return true
+      
+      return false
+    })
+  }
+  
+  processed = processed.sort((a, b) => {
+  	return sorting[1] ? a[sorting[0]].localeCompare(b[sorting[0]]) : b[sorting[0]].localeCompare(a[sorting[0]])
+  })
+  
+  return <div>
+  	<View data={processed} />
+  </div>
 }
