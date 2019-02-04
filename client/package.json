@@ -13,6 +13,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "gh-pages": "PUBLIC_URL=/phonebook/ react-scripts build; cp build-gh-pages.git build/.git; cd build; git add --all; git commit -m 'gh-pages update'; git push;",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
