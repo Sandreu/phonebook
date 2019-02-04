@@ -8,19 +8,19 @@ self.__precacheManifest = [
     "url": "/phonebook/static/js/runtime~main.e6f93ec8.js"
   },
   {
-    "revision": "e8f51927f00a7afb74b6",
-    "url": "/phonebook/static/js/main.e8f51927.chunk.js"
+    "revision": "a508d276f4201e858674",
+    "url": "/phonebook/static/js/main.a508d276.chunk.js"
   },
   {
     "revision": "a5b1db625cb998cc3bf9",
     "url": "/phonebook/static/js/1.a5b1db62.chunk.js"
   },
   {
-    "revision": "e8f51927f00a7afb74b6",
+    "revision": "a508d276f4201e858674",
     "url": "/phonebook/static/css/main.5fb11a5c.chunk.css"
   },
   {
-    "revision": "572d65f027c0d2d511f6e7cd0b0c94de",
+    "revision": "b15c41f301d4049f18f17fc91a7b5cae",
     "url": "/phonebook/index.html"
   }
 ];
