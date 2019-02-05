@@ -27,3 +27,8 @@ export const Filter = styled.span`
     background: #90CAF9;
   }
 `
+export const Infos = styled.div`
+  margin-left: 10px;
+  font-size: 0.8em;
+  max-width: 200px;
+`
